@@ -1,0 +1,32 @@
+.footer {
+    height: 7vh;
+    margin: 0 10vw;
+    color: white;
+    font-weight: bolder;
+}
+
+.footer p {
+    margin: 0.75vh 0;
+    font-size: 0.75rem;
+}
+
+.footer ul {
+    text-align: center;
+    margin-top: 0;
+}
+
+.footer ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 0 1vw;
+    font-size: 0.85rem;
+    font-size: 0.65rem;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}

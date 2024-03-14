@@ -1,0 +1,48 @@
+/*
+    Universal CSS
+*/
+.wrapper {
+    margin-bottom: 3vh;
+    width: 100%;
+}
+
+.wrapper h2 {
+    margin-top: 0;
+}
+
+.sunny, .cloudy, .rainy, .snowy {
+    padding-top: 1vh;
+    background-size: cover;
+    background-blend-mode: color;
+    object-fit: contain;
+    border-radius: 50px;
+    box-shadow: 10px 5px 5px black;
+    height: 15vh;
+    transition: box-shadow 2s ease, transform 2s ease;
+}
+
+.sunny {
+    background-image: url("../media/sunny-background.jpg");
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+.cloudy {
+    background-image: url("../media/cloudy-background.jpg");
+    background-color: rgba(0, 0, 0, 0.085);
+}
+
+.rainy {
+    background-image: url("../media/rainy-background.jpg");
+    background-color: rgba(0, 0, 0, 0.159);
+}
+
+.snowy {
+    background-image: url("../media/snowy-background.jpeg");
+    background-color: rgba(0, 0, 0, 0.525);
+}
+
+.sunny:hover, .rainy:hover, .cloudy:hover, .snowy:hover {
+    box-shadow: -10px -5px 5px black;
+    transform: translate(10px, 5px);
+    transition: box-shadow 2s ease, transform 2s ease;
+}

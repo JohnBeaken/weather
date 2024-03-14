@@ -1,0 +1,68 @@
+/*
+    Universal CSS
+*/
+.wrapper {
+    list-style-type: none;
+    display: flex;
+    width: 25%;
+    height: 7vh;
+    transition: height 2s ease, width 2s ease;
+}
+
+.wrapper:hover {
+    height: 10vh;
+    width: 36%;
+    transition: height 3s ease, width 3s ease;
+}
+
+.wrapper:hover .fall {
+    opacity: 100;
+    transition: opacity 4s ease-in;
+}
+
+.sunny {
+    background-image: url("../media/sunny-background.jpg");
+    background-color: rgba(0, 0, 0, 0.408);
+}
+
+.cloudy {
+    background-image: url("../media/cloudy-background.jpg");
+    background-color: rgba(0, 0, 0, 0.408);
+}
+
+.rainy {
+    background-image: url("../media/rainy-background.jpg");
+    background-color: rgba(0, 0, 0, 0.408);
+}
+
+.snowy {
+    background-image: url("../media/snowy-background.jpeg");
+    background-color: rgba(0, 0, 0, 0.525);
+}
+
+.cloudy, .sunny, .rainy, .snowy {
+    background-size: cover;
+    background-blend-mode: color;
+    object-fit: contain;
+    border-radius: 15%;
+    box-shadow: 10px 5px 5px black;
+}
+
+.time {
+    font-weight: bold;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.temp {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.fall {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    font-weight: bold;
+    margin: 6px 0.5rem 0 0.5rem;
+    font-size: 0.75rem;
+}
