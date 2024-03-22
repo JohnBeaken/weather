@@ -4,6 +4,9 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   cursor: url(https://cur.cursors-4u.net/nature/nat-11/nat1022.cur), auto !important;
+  font-family:'Courier New', Courier, sans-serif;
+  background-color: rgba(0, 0, 0, 0.755);
+  background-blend-mode: color;
 }
 
 a {
@@ -12,7 +15,6 @@ a {
 
 body {
   margin: 0;
-  font-family:'Courier New', Courier, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;

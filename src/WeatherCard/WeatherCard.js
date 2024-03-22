@@ -20,12 +20,10 @@ export default function WeatherCard({time, temp, rain, snow, probability}) {
     }
 
     return (
-        <li className={styles.wrapper}>
-            <div className={background}>
-                <p className={styles.time}>{time}</p>
-                <p className={styles.temp}>{temp}&deg;</p>
-                <p className={styles.fall}>{display} - {probability}%</p>
-            </div>
-        </li>
+        <div className={background}>
+            <p className={styles.time}>{time}</p>
+            <p className={styles.temp}>{temp}&deg;</p>
+            <p className={styles.fall}>{probability}% Chance of {display}</p>
+        </div>
     );
 }

@@ -1,14 +1,19 @@
 import React from 'react';
 import styles from './searchbar.module.css';
+import typeStyles from '../animations/type.module.css';
 import { getForecast } from '../util/Tomorrow';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setNow } from '../store/nowSlice';
 import { resetForecast, addForecast } from '../store/forecastSlice';
+import { useSelector } from 'react-redux';
 
 /*  A component that allows the user to search for a city or location. The component will then get the weather data, update the state,
     and display the name of the location the user searched for. */
 export default function SearchBar() {
+
+    // Application State
+    const now = useSelector((state) => state.now);
 
     // Create dispatch
     const dispatch = useDispatch();
@@ -69,7 +74,7 @@ export default function SearchBar() {
                 >
                 </button>
             </div>
-            <h2>Weather in: {oldSearch}</h2>
+            {Object.keys(now).length > 0 && <h2 className={typeStyles.type}>Weather in {oldSearch}</h2>}
         </form>
     );
 }

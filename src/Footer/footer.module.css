@@ -1,18 +1,44 @@
 .footer {
-    height: 7vh;
-    margin: 0 10vw;
+    height: 6%;
+    width: 100%;
     color: white;
     font-weight: bolder;
+    position: fixed;
+    bottom: 0px;
+    background-color: black;
+    border-top: 1px groove white;
 }
 
 .footer p {
     margin: 0.75vh 0;
-    font-size: 0.75rem;
+    font-size: 1rem;
+}
+
+.disappear, .appear {
+    transition: opacity .2s ease;
+}
+
+.disappear {
+    opacity: 0;
+}
+
+.appear {
+    opacity: 100;
 }
 
 .footer ul {
+    padding-top: 1rem;
     text-align: center;
     margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.478);
+    flex-wrap: wrap;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    width: 70%;
+    padding: 1rem;
+    border: 2px ridge black;
+    justify-content: center;
 }
 
 .footer ul li {
@@ -20,13 +46,53 @@
     display: inline;
     margin: 0 1vw;
     font-size: 0.85rem;
-    font-size: 0.65rem;
+}
+
+.footer ul li::before {
+    content: "";
+}
+
+.footer ul li::after {
+    content: " - "
+}
+
+.footer ul li:last-child::after {
+    content: "";
 }
 
 .footer a {
     color: white;
+    text-decoration: none;
+    pointer-events: none;
 }
 
-.footer a:hover {
-    text-decoration: none;
+/*****
+ 950px
+*****/
+@media (min-width: 950px) {
+    .footer p {
+        font-size: 1.15rem;
+    }
+}
+
+/******
+ 1050px
+******/
+@media (min-width: 1050px) {
+    .footer ul li {
+        font-size: 1rem;
+    }
+}
+
+/******
+ 1300px
+******/
+@media (min-width: 1300px) {
+    .footer p {
+        font-size: 1.25rem;
+    }
+
+    .footer ul li {
+        font-size: 1.15rem;
+    }
 }

@@ -1,0 +1,70 @@
+.wrapper {
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.arrows {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.button {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.425);
+    border: 1px solid black;
+    border-radius: 60%;
+    color: blue;
+    cursor: pointer;
+}
+
+.suspense {
+    width: 92%;
+    background-color: rgba(0, 0, 0, 0.408);
+    min-height: 15rem;
+    margin: auto;
+    margin-top: 2rem;
+    border: 2px ridge black;
+    padding: 0.5rem;
+}
+
+/*****
+ 850px
+*****/
+@media (min-width: 850px) {
+    .suspense {
+        min-height: 17rem;
+    }
+}
+
+/*****
+ 950px
+*****/
+@media (min-width: 950px) {
+    .suspense {
+        min-height: 20rem;
+    }
+}
+
+/******
+ 1024px
+******/
+@media (min-width: 1024px) {
+    .button:hover {
+        background-color: rgba(134, 125, 125, 0.408);
+        transition: background-color 0.2s ease;
+    }
+}
+
+/******
+ 1300px
+******/
+@media (min-width: 1300px) {
+    .suspense {
+        min-height: 23rem;
+        width: 90%;
+    }
+}

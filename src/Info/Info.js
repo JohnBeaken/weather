@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './info.module.css';
-import WeatherCard from '../WeatherCard/WeatherCard';
-import Now from '../Now/Now';
+import typeStyles from '../animations/type.module.css';
 import SearchBar from '../SearchBar/SearchBar';
+import Forecast from '../Forecast/Forecast';
 import { useSelector } from 'react-redux';
+import ForecastSuspense from '../Forecast/ForecastSuspense';
 
 // A wrapper component that displays weather data components, as well as passing state to each of them
 export default function Info() {
 
     // Application State
-    const forecast = useSelector((state) => state.forecast);
     const now = useSelector((state) => state.now);
 
     return(
@@ -18,29 +18,10 @@ export default function Info() {
             {/*SearchBar component*/}
             <SearchBar />
 
-            {/*Current Weather*/}
-            <Now
-                temp={now.temp}
-                rain={now.rain}
-                snow={now.snow}
-                probability={now.probability}
-            />
-
-            {/*A ul that displays a WeatherCard for each element in the forecast state*/}
-            <ul>
-                {forecast.map((hour) => {
-                    return (
-                        <WeatherCard
-                            time={hour.time}
-                            temp={hour.temp}
-                            rain={hour.rain}
-                            snow={hour.snow}
-                            probability={hour.probability}
-                        />
-                    );
-                })}
-            </ul>
-            
+            {/*A Forecast component*/}
+            {Object.keys(now).length === 0 && <h2 className={typeStyles.type}>Awaiting location...</h2>}
+            {Object.keys(now).length === 0 && <ForecastSuspense />}
+            {Object.keys(now).length > 0 && <Forecast/>}
         </div>
     );
 }

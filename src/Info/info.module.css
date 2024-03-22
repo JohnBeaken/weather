@@ -2,25 +2,9 @@
     Universal CSS
 */
 .wrapper {
-    margin: 5vh 5vw 1vh 5vw;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.755);
-    text-align: center;
-    border-radius: 3rem;
-    border: 3px solid black;
-    height: 56vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.wrapper ul {
+    width: 100%;
     margin: 0 auto;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-    justify-content: baseline;
+    text-align: center;
+    padding: 0;
+    height: 56vh;
 }
